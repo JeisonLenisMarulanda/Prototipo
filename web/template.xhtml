@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="es" 
+    xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+    xmlns:h="http://xmlns.jcp.org/jsf/html"
+    xmlns:p="http://primefaces.org/ui"
+    xmlns:jsf="http://xmlns.jcp.org/jsf">
+
+    <head jsf:id="head">
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, minimum-scale=1,maximun-scale=1" />
+        <title><ui:insert name="title">HOUSEYA</ui:insert></title>
+        <h:outputStylesheet library="css" name="estilos.css"/>
+        <h:outputStylesheet library="css" name="jsfcrud.css"/>
+        <h:outputScript library="js" name="jsfcrud.js"/>
+    </head>
+
+    <body jsf:id="body">
+        <p:growl id="growl" life="3000" />
+
+        <center>
+            <section class="Band-mant">
+                <nav class="MainMenu">
+                    <ui:insert name="menu"/>
+                </nav>
+                <article class="View-cpds">
+                    <ui:insert name="body"/>
+                    <br/>
+                </article>
+            </section>
+        </center>
+        <footer class="Footer" >
+            <article class="Footer-item">
+                <h4 class="Footer-title">Contacto</h4>
+            </article>
+            <article class="Footer-item">
+                <h4 class="Footer-title">Houseya</h4>
+            </article>
+            <article class="Footer-item">
+
+                links
+            </article>
+        </footer>
+
+
+    </body>
+
+</html>

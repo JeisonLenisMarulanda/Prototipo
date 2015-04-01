@@ -1,0 +1,133 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 31/03/2015, 01:44:29 PM
+    Author     : usuario
+*/
+a{
+    text-decoration: none;
+}
+
+body{
+    margin: 0;
+    background-image: url("../resources/images/apartamento.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+nav{
+    background-color: #333;
+}
+
+ul{
+    padding: 0;
+}
+/*
+#tabla{
+    margin-top: 3em;
+}*/
+
+#ArriendoCreateForm{
+     margin-top: 3em;
+    background-color: #A4A4A4;
+    background: rgba( 0,0,0,0.7);
+    border-radius: 10px;
+    color: white;
+    font-family: Raleway;
+    font-size: 15pt;
+    padding: .3em;
+    width: 250px;
+}
+
+.Contenedor{
+    margin-top: 3em;
+    background-color: #A4A4A4;
+    background: rgba( 0,0,0,0.7);
+    border-radius: 10px;
+    color: white;
+    font-family: Raleway;
+    font-size: 15pt;
+    padding: 2em;
+    width: 250px;
+}
+
+.Footer{
+    background-color: #333;
+    margin-top: 9em;
+    position: absolute;
+    width: 100%;
+    height: 210px;
+}
+
+.InputForm{
+    
+    font-size: 15pt;
+    font-family: Raleway;
+    border-radius: 10px;
+    height: 1em;
+    width: 6em;
+    float: right;
+}
+
+.LabelForm{
+    font-size: 15pt;
+    font-family: Raleway;
+}
+
+.Lista-item{
+    text-align: center;
+    background-color: gray;
+    display: inline-block;
+    padding-bottom: 2em;
+    padding-top: 2em;
+    list-style: none;
+    width: 12em;
+}
+
+.Link-item{
+    color: white;
+    font-family: Raleway;
+    font-size: 15pt;
+}
+.Link-item:hover{
+            background: -webkit-gradient(linear, left top, left bottom, from(#808080), to(#cccccc));
+            background: -moz-linear-gradient(center top , #808080, #A4A4A4);
+            background: -o-linear-gradient(center top , #808080, #A4A4A4);
+            background: -ms-linear-gradient(center top , #808080, #A4A4A4);
+            background: linear-gradient(center top , #808080, #A4A4A4);
+        
+    color: #333;
+}
+
+.u-first{
+    color: white;
+    padding-bottom: 1.6em;
+    padding-left: 1.6em;
+    padding-right: 1.6em;
+    padding-top: 1.6em;
+}
+
+.u-second{
+    color: white;
+    padding-bottom: 1.6em;
+    padding-left: .3em;
+    padding-right: .3em;
+    padding-top: 1.6em;
+}
+
+.u-third{
+    color: white;
+    padding-bottom: 1.6em;
+    padding-left: .6em;
+    padding-right: .6em;
+    padding-top: 1.6em;
+}
+.u-inicio{
+    padding-bottom: 1.6em;
+    padding-left: 3.6em;
+    padding-right: 3.6em;
+    padding-top: 1.6em;
+}

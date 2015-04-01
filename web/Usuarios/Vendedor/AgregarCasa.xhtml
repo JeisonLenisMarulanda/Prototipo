@@ -1,0 +1,71 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="es"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:jsf="http://xmlns.jcp.org/jsf">
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">Solicitudes</ui:define>
+        <ui:define name="menu"><ui:include src="/Usuarios/Vendedor/menuVendedor.xhtml"></ui:include></ui:define>
+        <ui:define name="body">
+            <h:form id="ArriendoCreateForm" rendered="#{arriendoController.selected != null}">
+                <br>
+                    <label jsf:value="#{bundle.CreateArriendoLabel_barrio}" for="barrio" class="LabelForm"/>
+                    <input type="text" jsf:id="barrio"  required="true" class="InputForm"
+                           jsf:value="#{arriendoController.selected.barrio}" 
+                           title="#{bundle.CreateArriendoTitle_barrio}" 
+                           requiredMessage="#{bundle.CreateArriendoRequiredMessage_barrio}">
+                    </input>
+                </br>    
+
+                <br>
+                    <label jsf:value="#{bundle.CreateArriendoLabel_precio}" for="precio" class="LabelForm"/>
+                    <input type="text" jsf:id="precio"  required="true" class="InputForm"
+                           jsf:value="#{arriendoController.selected.precio}" 
+                           title="#{bundle.CreateArriendoTitle_precio}" 
+                           jsf:requiredMessage="#{bundle.CreateArriendoRequiredMessage_precio}">
+                    </input>
+                </br>
+
+                <br>
+                    <label jsf:value="#{bundle.CreateArriendoLabel_descripcion}" for="descripcion" class="LabelForm"/>
+                    <textarea cols="15"  type="text" jsf:id="descripcion"  required="true"
+                           jsf:value="#{arriendoController.selected.descripcion}" 
+                           title="#{bundle.CreateArriendoTitle_descripcion}" 
+                           jsf:requiredMessage="#{bundle.CreateArriendoRequiredMessage_descripcion}">
+                    </textarea>
+                </br>
+
+                <br>
+                    <label jsf:value="#{bundle.CreateArriendoLabel_direccionDomicilio}" for="direccionDomicilio" class="LabelForm"/>
+                    <input type="text" jsf:id="direccionDomicilio"  required="true" class="InputForm"
+                           jsf:value="#{arriendoController.selected.direccionDomicilio}" 
+                           title="#{bundle.CreateArriendoTitle_direccionDomicilio}" 
+                           jsf:requiredMessage="#{bundle.CreateArriendoRequiredMessage_direccionDomicilio}">
+                    </input>
+                </br>
+
+                <br>
+                    <label jsf:value="#{bundle.CreateArriendoLabel_fotos}" for="fotos" class="LabelForm"/>
+                    <input type="text" jsf:id="fotos"  class="InputForm"
+                           jsf:value="#{arriendoController.selected.fotos}" 
+                           title="#{bundle.CreateArriendoTitle_fotos}" >
+                    </input>
+                </br>
+
+                <br>
+                    <label jsf:value="#{bundle.CreateArriendoLabel_idUsuario}" for="idUsuario" class="LabelForm"/>
+                    <p:selectOneMenu id="idUsuario" value="#{arriendoController.selected.idUsuario}" required="true" requiredMessage="#{bundle.EditArriendoRequiredMessage_idUsuario}">
+                        <f:selectItems value="#{usuarioController.itemsAvailableSelectOne}"
+                                       var="idUsuarioItem"
+                                       itemValue="#{idUsuarioItem}"/>
+                    </p:selectOneMenu>
+                </br>
+                <button type="submit" jsf:actionListener="#{arriendoController.create}" class="degradado">Guardar</button>
+            </h:form>
+        </ui:define>
+    </ui:composition>
+</html>

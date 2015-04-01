@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+
+    <ui:composition>
+
+        <p:dialog id="ArriendoCreateDlg" widgetVar="ArriendoCreateDialog" modal="true" resizable="false" appendTo="@(body)" header="#{bundle.CreateArriendoTitle}">
+            <h:form id="ArriendoCreateForm">
+                <h:panelGroup id="display">
+                    <p:panelGrid columns="2" rendered="#{arriendoController.selected != null}">
+                        <p:outputLabel value="#{bundle.CreateArriendoLabel_idAlquiler}" for="idAlquiler" />
+                        <p:inputText id="idAlquiler" value="#{arriendoController.selected.idAlquiler}" title="#{bundle.CreateArriendoTitle_idAlquiler}" required="true" requiredMessage="#{bundle.CreateArriendoRequiredMessage_idAlquiler}"/>
+                        <p:outputLabel value="#{bundle.CreateArriendoLabel_barrio}" for="barrio" />
+                        <p:inputText id="barrio" value="#{arriendoController.selected.barrio}" title="#{bundle.CreateArriendoTitle_barrio}" required="true" requiredMessage="#{bundle.CreateArriendoRequiredMessage_barrio}"/>
+                        <p:outputLabel value="#{bundle.CreateArriendoLabel_precio}" for="precio" />
+                        <p:inputText id="precio" value="#{arriendoController.selected.precio}" title="#{bundle.CreateArriendoTitle_precio}" required="true" requiredMessage="#{bundle.CreateArriendoRequiredMessage_precio}"/>
+                        <p:outputLabel value="#{bundle.CreateArriendoLabel_descripcion}" for="descripcion" />
+                        <p:inputText id="descripcion" value="#{arriendoController.selected.descripcion}" title="#{bundle.CreateArriendoTitle_descripcion}" required="true" requiredMessage="#{bundle.CreateArriendoRequiredMessage_descripcion}"/>
+                        <p:outputLabel value="#{bundle.CreateArriendoLabel_direccionDomicilio}" for="direccionDomicilio" />
+                        <p:inputText id="direccionDomicilio" value="#{arriendoController.selected.direccionDomicilio}" title="#{bundle.CreateArriendoTitle_direccionDomicilio}" required="true" requiredMessage="#{bundle.CreateArriendoRequiredMessage_direccionDomicilio}"/>
+                        <p:outputLabel value="#{bundle.CreateArriendoLabel_fotos}" for="fotos" />
+                        <p:inputText id="fotos" value="#{arriendoController.selected.fotos}" title="#{bundle.CreateArriendoTitle_fotos}" />
+                        <p:outputLabel value="#{bundle.CreateArriendoLabel_idUsuario}" for="idUsuario" />
+                        <p:selectOneMenu id="idUsuario" value="#{arriendoController.selected.idUsuario}" required="true" requiredMessage="#{bundle.EditArriendoRequiredMessage_idUsuario}">
+                            <f:selectItems value="#{usuarioController.itemsAvailableSelectOne}"
+                                           var="idUsuarioItem"
+                                           itemValue="#{idUsuarioItem}"/>
+                        </p:selectOneMenu>
+                    </p:panelGrid>
+                    <p:commandButton actionListener="#{arriendoController.create}" value="#{bundle.Save}" update="display,:ArriendoListForm:datalist,:growl" oncomplete="handleSubmit(args,'ArriendoCreateDialog');"/>
+                    <p:commandButton value="#{bundle.Cancel}" onclick="ArriendoCreateDialog.hide()"/>
+                </h:panelGroup>
+            </h:form>
+        </p:dialog>
+
+    </ui:composition>
+</html>

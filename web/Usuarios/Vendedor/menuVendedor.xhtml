@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:jsf="http://xmlns.jcp.org/jsf"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
+    <ui:composition>
+        <h:form>
+            <nav class="HeaderList">
+                <ul>
+                    <li class="Lista-item"><p:button value="Users" icon="ui-icon-transferthick-e-w" outcome="/index"/></li>
+                    <li class="Lista-item"><a value="Inicio" class="Link-item u-inicio" jsf:outcome="/Usuarios/Vendedor/MainPage.xhtml"/></li>
+                    <li class="Lista-item"><a value="Agregar Casa" class="Link-item u-first" jsf:action="#{arriendoController.prepareCreate()}"/></li>
+                    <li class="Lista-item"><a value="Listados Recientes" class="Link-item u-second" jsf:outcome="/Usuarios/Vendedor/ListadoCasa.xhtml"/></li>                   
+                </ul>
+            </nav>
+        </h:form> 
+    </ui:composition>
+</html>
